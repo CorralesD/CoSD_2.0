@@ -1,2 +1,6 @@
+@import 'normalize.css';
 // Variable overrides first
 $primary: rgb(0, 119, 255);
+
+// Then import Bootstrap
+@import '../node_modules/bootstrap4/scss/bootstrap';
