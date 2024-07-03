@@ -1,6 +1,15 @@
 @import 'normalize.css';
-// Variable overrides first
+
 $primary: rgb(0, 119, 255);
 
-// Then import Bootstrap
 @import '../node_modules/bootstrap4/scss/bootstrap';
+
+.logo__text {
+	text-transform: uppercase;
+	color: #58585a;
+	margin: 1rem 3px;
+}
+
+.logo__text span {
+	display: block;
+}

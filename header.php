@@ -6,3 +6,8 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
+  <header class="site-header">
+
+    <?php get_template_part( 'global-templates/navbar' ) ?>
+
+  </header>
