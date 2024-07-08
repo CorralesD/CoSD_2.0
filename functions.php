@@ -4,4 +4,14 @@ function beta_theme_files() {
     wp_enqueue_style('main_beta_theme_styles', get_theme_file_uri('/build/index.css'));
 }
 add_action('wp_enqueue_scripts', 'beta_theme_files' );
+
+
+$_include = array(
+    '/card.php'
+);
+
+foreach( $_include as $component ) {
+    require_once get_theme_file_path( '/lib/components' . $component );
+}
+
 ?>

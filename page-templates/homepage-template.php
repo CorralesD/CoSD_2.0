@@ -152,13 +152,13 @@ get_header();
         </div>
         <div class="row mb-5">
             <div class="col">
-             
+            <?php card() ?>
             </div>
             <div class="col">
-             
+            <?php card() ?>
             </div>
             <div class="col">
-             
+            <?php card() ?>
             </div>
         </div>
         <div class="row">
