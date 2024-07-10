@@ -183,35 +183,48 @@ get_header();
 
 <section class="events-section pt-5 pb-5">
     <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="col">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col">
-                       
+        <div class="row">
+            <div class="col-xs-12 pl-3 mb-3"><h3>Events</h3></div>
+        </div>
+        <div class="row mb-5">
+            <?php
+            $eventsFeed = new WP_Query(array(
+                'posts_per_page' => 2,
+                'post_type' => 'event',
+            ));
+
+            // print_r ($eventsFeed->have_posts());
+
+            if (!$eventsFeed->have_posts()) { ?>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <?php }
+            while($eventsFeed->have_posts()) {
+                $eventsFeed->the_post(); ?>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://beta.sandiegocounty.gov/wp-content/uploads/2023/08/WaterfrontPark-1200x775-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="<?php echo the_permalink(); ?>" class="btn btn-primary"><?php the_title(); ?></a>
+                    </div>
+                </div>
+            </div>
+            <?php  } ?>
         </div>
     </div>
 </section>
+
 
 <section class="governments-section pt-5 pb-5">
     <div class="container">
