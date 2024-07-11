@@ -13,3 +13,39 @@ $primary: rgb(0, 119, 255);
 .logo__text span {
 	display: block;
 }
+
+.services-section {
+	background: #f5f5f7;
+}
+
+.card-wrapper {
+	padding: 45px 0;
+	background: #ffde76;
+}
+
+.the-rail {
+	flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.the-rail .card {
+	transition: 1s;
+    left: 0;
+}
+
+.card-box {
+	background: #fff;
+	border-radius: 40px;
+}
+
+.card-box .img-fluid {
+	border-radius: 20px 20px 0px 0px;
+}
+
+.card-box  .card-text {
+	padding: 30px 20px 25px 20px;
+}
+
+.card-box  .card-text h4 {
+	font-size: 18px;
+}

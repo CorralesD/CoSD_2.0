@@ -146,22 +146,37 @@ get_header();
 
 <!-- news section -->
 <section class="news-section pt-5 pb-5">
-    <div class="container">
+
+    <div class="container mb-5">
         <div class="row">
             <div class="col-xs-12 pl-3 mb-3"><h3>News</h3></div>
         </div>
-        <div class="row mb-5">
+       
+        <div class="row the-rail mb-5">
+        <div class="col">
+                <?php card() ?>
+                </div>
+
             <div class="col">
-            <?php card() ?>
-            </div>
+                <?php card() ?>
+                </div>
+
             <div class="col">
-            <?php card() ?>
-            </div>
+                <?php card() ?>
+                </div>
             <div class="col">
-            <?php card() ?>
-            </div>
+                <?php card() ?>
+                </div>
+                
+      </div>
+      <div class="row mb-5">
+        <div class="col-12">
+            <div class="btn btn-primary">View All News</div>
+            <div class="btn btn-primary move-item-left"><</div>
+            <div class="btn btn-primary move-item-right">></div>
         </div>
-        <div class="row">
+      </div>
+        <div class="row mb5">
             <div class="container-fluid"> 
                 <div class="row"> 
                     <div class="col-4"> 
@@ -193,8 +208,6 @@ get_header();
                 'post_type' => 'event',
             ));
 
-            // print_r ($eventsFeed->have_posts());
-
             if (!$eventsFeed->have_posts()) { ?>
             <div class="col">
                 <div class="card" style="width: 18rem;">
@@ -225,6 +238,86 @@ get_header();
     </div>
 </section>
 
+<!-- card area start  -->
+
+<div class="card-wrapper">
+  <div class="container">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h3>Events</h3>
+        </div>
+
+      <div class="row the-rail">
+      <div class="col-sm-4">
+            <div class="card card-box">
+                <img
+                    class="img-fluid"
+                    src="https://beta.sandiegocounty.gov/wp-content/uploads/2023/08/WaterfrontPark-1200x775-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                />
+                <div class="card-text">
+                    <span class="badge bg-info text-light">Holiday</span>
+                    <h3>Independece Day</h3>
+                    <p>July 4, 2024</p>
+                    <p>All day</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card card-box">
+                <img
+                    class="img-fluid"
+                    src="https://beta.sandiegocounty.gov/wp-content/uploads/2023/08/WaterfrontPark-1200x775-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                />
+                <div class="card-text">
+                    <span class="badge bg-info text-light">Holiday</span>
+                    <h3>Independece Day</h3>
+                    <p>July 4, 2024</p>
+                    <p>All day</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card card-box">
+                <img
+                    class="img-fluid"
+                    src="https://beta.sandiegocounty.gov/wp-content/uploads/2023/08/WaterfrontPark-1200x775-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                />
+                <div class="card-text">
+                    <span class="badge bg-info text-light">Holiday</span>
+                    <h3>Independece Day</h3>
+                    <p>July 4, 2024</p>
+                    <p>All day</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card card-box">
+                <img
+                    class="img-fluid"
+                    src="https://beta.sandiegocounty.gov/wp-content/uploads/2023/08/WaterfrontPark-1200x775-1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                />
+                <div class="card-text">
+                    <span class="badge bg-info text-light">Holiday</span>
+                    <h3>Independece Day</h3>
+                    <p>July 4, 2024</p>
+                    <p>All day</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="governments-section pt-5 pb-5">
     <div class="container">
